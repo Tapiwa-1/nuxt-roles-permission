@@ -4,7 +4,9 @@ export default defineNuxtConfig({
   modules: [
     'nuxt-permissions',
     '@nuxtjs/tailwindcss',
-    // "./node_modules/flowbite/**/*.{js,ts}"
-    // ...
+    '@nuxtjs/tailwindcss',
+    'nuxt-icon',
+    '@pinia/nuxt',
+    '@pinia-plugin-persistedstate/nuxt',
   ]
 })
