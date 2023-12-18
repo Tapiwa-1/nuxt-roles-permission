@@ -40,6 +40,9 @@ const logout = () => {
                                 <NavLink :href="'/dashboard'" :active="'dashboard'">
                                     Dashboard
                                 </NavLink>
+                                <NavLink :href="'/admin/role/roles'">
+                                    Roles
+                                </NavLink>
                             </div>
                         </div>
 
@@ -64,7 +67,7 @@ const logout = () => {
                                     </template>
 
                                     <template #content>
-                                        <DropdownLink :to="'profile/edit'"> Profile </DropdownLink>
+                                        <DropdownLink to="/profile/edit"> Profile </DropdownLink>
                                         <DropdownLink @click="logout()">
                                             Log Out
                                         </DropdownLink>
