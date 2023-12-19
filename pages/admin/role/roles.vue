@@ -1,12 +1,11 @@
 <script setup>
-const { $roleStore, $profileStore } = useNuxtApp()
-
+const { $roleStore, $profileStore, $generalStore } = useNuxtApp()
 
 </script>
 <template>
     <NuxtLayout name="authenticated-layout">
         <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">{{ $roleStore.roles }}</h2>
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">Roles</h2>
         </template>
 
         <div class="py-12">
@@ -26,10 +25,11 @@ const { $roleStore, $profileStore } = useNuxtApp()
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+                                <tr v-for="role in $roleStore.roles" :key="role.id"
+                                    class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
                                     <th scope="row"
                                         class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        Roles
+                                        {{ role.name }}
                                     </th>
                                     <td class="px-6 py-4">
                                         <NuxtLink class="font-medium mr-1 text-blue-600 dark:text-blue-500 hover:underline">

@@ -18,7 +18,7 @@ const login = async () => {
         await $userStore.getTokens()
         await $userStore.login(email.value, password.value)
         await $profileStore.getProfile()
-        await $roleStore.getRols()
+        await $roleStore.getRoles()
         $generalStore.isPoccessing = false
         router.push("/dashboard")
 

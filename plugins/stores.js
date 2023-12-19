@@ -11,7 +11,7 @@ export default defineNuxtPlugin((NuxtApp) => {
             profileStore: useProfileStore(),
             generalStore: useGeneralStore(),
             userStore: useUserStore(),
-            userRole: useRoleStore(),
+            roleStore: useRoleStore(),
         },
     }
 })

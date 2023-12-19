@@ -6,16 +6,14 @@ const $axios = axios().provide.axios
 export const useRoleStore = defineStore('role', {
   state: () => ({
     id: '',
-    name: '',
+    name: 'ss',
     roles: null,
-   
-    
   }),
   
   actions: {
     async getRoles() {
         let res = await $axios.get('/api/get-roles')
-        this.$state.roles = res.data[0].id
+        this.$state.roles = res.data
     
       },
   },
