@@ -12,6 +12,10 @@ const { $roleStore, $profileStore, $generalStore } = useNuxtApp()
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class=" shadow-md sm:rounded-lg">
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                            @click="$generalStore.showOverlay = true">
+                            Button {{ $generalStore.showOverlay }}
+                        </button>
                         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-900 dark:text-gray-400">
                                 <tr>

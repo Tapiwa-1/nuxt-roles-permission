@@ -3,6 +3,7 @@ import { defineStore } from 'pinia'
 export const useGeneralStore = defineStore('general', {
   state: () => ({
     isPoccessing: null,
+    showOverlay: null,
     updatingProfile: null,
     changingPassword: null,
     showModal: false

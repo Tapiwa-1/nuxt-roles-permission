@@ -1,13 +1,14 @@
 <template>
     <Nuxt-page />
+    <FormOverlay v-if="$generalStore.showOverlay" />
 </template>
 <script setup>
+import { storeToRefs } from 'pinia';
+const { $generalStore, $userStore } = useNuxtApp()
+// const { showOverlay } = storeToRefs($generalStore)
 
-const { $userStore, $generalStore } = useNuxtApp()
 
 onMounted(async () => {
-
-
     try {
         await $generalStore.hasSessionExpired()
         if ($userStore.id) {
