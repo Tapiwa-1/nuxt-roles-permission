@@ -5,7 +5,6 @@
 
             <div class=" p-4 sm:p-8 bg-white shadow sm:rounded-lg dark:bg-gray-900">
                 <div class="flex">
-                    <h3>ADD Details</h3>
                     <button type="button" @click="$generalStore.showOverlay = false"
                         class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
                         data-modal-hide="default-modal">
@@ -17,9 +16,7 @@
                         <span class="sr-only">Close modal</span>
                     </button>
                 </div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nesciunt voluptate, ut cumque
-                pariatur, aliquam modi molestiae natus asperiores quasi accusamus exercitationem fuga labore quod ex,
-                repellat aspernatur neque nobis?
+                <AddRole />
             </div>
 
 

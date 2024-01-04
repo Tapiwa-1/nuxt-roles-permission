@@ -16,6 +16,10 @@ export const useRoleStore = defineStore('role', {
         this.$state.roles = res.data
     
       },
+      async addRole(data) {
+        return await $axios.post('/api/add-role',data)
+      }
+  
   },
   persist: true,
 })
